@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+:root {
+    --red: #0080ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection {
+    background: var(--red);
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: 0.5s;
+    background: #04f04b;
+    background-image: url(images/reg.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+
+body.active {
+    background: #c0fa1f;
+    background-image: url(images/reg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+header {
+    width: 100%;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 2.5rem 7%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header .logo {
+    font-size: 2.5rem;
+    color: #0080ff;
+}
+
+header .logo span {
+    color: var(--red);
+}
+
+header .navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+header .navbar ul li {
+    margin-left: 2.5rem;
+}
+
+header .navbar ul li a {
+    color: #999;
+    font-size: 2rem;
+}
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover {
+    color: var(--red);
+    border-bottom: .2rem solid var(--red);
+    padding: .7rem 0;
+}
+
+.container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 20px;
+}
+
+.bluebg {
+    position: absolute;
+    top: 40px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 420px;
+    background: rgb(255, 255, 255, 0.2);
+    box-shadow: 0 5px 45px rgb(0, 0, 0, 0.15);
+}
+
+.bluebg .box {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bluebg .box h2 {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.bluebg .box button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #fff;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+}
+
+.formbx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.25);
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.formbx.active {
+    left: 50%;
+}
+
+.formbx .form {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 50px;
+    transition: 0.5s;
+}
+
+.formbx.active .signinForm {
+    left: -55vh;
+    transition-delay: 0.25s;
+}
+
+.formbx .signinForm {
+    transition-delay: 0s;
+}
+
+.formbx .signupForm {
+    left: 100%;
+    transition-delay: 0s;
+}
+
+.formbx.active .signupForm {
+    left: 0;
+    transition-delay: 0.25s;
+}
+
+.formbx .form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formbx .form form h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.formbx .form form input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid #333;
+}
+
+.formbx .form form input[type="submit"] {
+    background: #03a9fa;
+    border: none;
+    color: #fff;
+    max-width: 100px;
+    cursor: pointer;
+}
+
+.formbx.active .signupForm input[type="submit"] {
+    background: #f43648;
+}
+
+.formbx .form form .forgot {
+    color: #333;
+}
+
+@media(max-width: 991px) {
+    .container {
+        max-width: 400px;
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .bluebg {
+        top: 0;
+        height: 100%;
+    }
+    .formbx {
+        width: 100%;
+        height: 500px;
+        top: 0;
+        box-shadow: none;
+    }
+    .bluebg .box {
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        bottom: 0;
+    }
+    .box.signin {
+        top: 0;
+    }
+    .formbx.active {
+        left: 0;
+        top: 150px;
+    }
+}

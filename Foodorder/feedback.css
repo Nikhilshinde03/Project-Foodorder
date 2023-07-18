@@ -1,0 +1,98 @@
+:root{
+    --red: #0080ff;
+  }
+ .feedback .row .image{
+  flex:1 1 30rem; 
+
+ }
+.heading{
+    font-size: 3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color: #0080ff;
+    margin: 2;
+
+}
+
+ .feedback .row .image img{
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+ 
+ }
+
+.feedback .row{
+    padding:-1rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    background:#fff;
+    border:.1rem solid black;
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    border-radius: .5rem;
+  }
+
+.feedback .row form{
+    flex:1 1 50rem;
+    padding:1rem;
+  }
+  
+  .feedback .row form .inputBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .feedback .row form .inputBox input, .feedback .row form textarea{
+    font-family:monospace;
+    padding:1rem;
+    margin:1rem 0;
+    font-size: 1rem;
+    color:red;
+    text-transform: none;
+    border:.1rem solid rgba(0, 0, 0, 0.459);
+    border-radius: .5rem;
+    width:100%;
+  }
+  label{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding:-1rem;
+    /* box-shadow: 0 .5rem 1rem rgba(0,0,0,.1); */
+    background:#fff;
+    /* border:.1rem solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+    border-radius: .5rem;
+
+  }
+  
+  .feedback .row form textarea{
+    font-family:monospace;
+    font-size: 1rem;
+    width:100%;
+    resize: none;
+    height:10rem;
+  }
+  
+  .feedback .row form .btn{
+    background:none;
+    margin: auto;
+    height: 3rem;
+    width: 11rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .btn:hover::before{
+    width:100%;
+    left: 0;
+  }
+  
+  .btn:hover{
+    background: none;
+  }
+  
+  .feedback .row form .btn:hover{
+    background: var(--red);
+  }

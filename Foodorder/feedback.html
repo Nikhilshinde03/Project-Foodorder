@@ -1,0 +1,45 @@
+    <!-- Feedback section ends -->
+    <section class="feedback" id="feedback">
+        <link rel="stylesheet" href="feedback.css">
+       
+
+        <h1 class="heading"> <span>Feedback</span>   </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="images/feedback.jpg" alt="">
+            </div>
+
+           
+                <form action="feedback.php" method="POST"> 
+
+                <div class="inputBox">
+                    <input type="text" name="name" placeholder=" Enter your name" required>
+                    <!-- <input type="email" placeholder="E-mail"> -->
+                </div>
+
+                <label>Gender:</label>&nbsp &nbsp
+                <input type="radio" name="gender" class="g" value="male" required>Male
+                <input type="radio" name="gender" class="g" value="female" required>Female<br><br>
+
+                <div class="inputBox">
+                    <input type="email" name="email" placeholder="Enter your E-mail id" required>
+                </div>
+
+                <div class="inputBox">
+                    <input type="number" name="number" placeholder="Enter mobile number" required>
+                    <!-- <input type="text" placeholder="Food Name"> -->
+                </div>
+
+                <textarea placeholder="Enter your message" name="message" id="" cols="30" rows="10" required></textarea>
+
+                <input type="submit" name="save" value="Submit" class="btn">
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- Feedback section ends -->
